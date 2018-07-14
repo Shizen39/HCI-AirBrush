@@ -1,0 +1,229 @@
+% !TeX spellcheck = IT
+
+% Chapter heading images should have a 2:1 width:height ratio,
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headsep=10pt,a4paper]{geometry} % Page margins
+
+\usepackage{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book
+
+% Font Settings
+\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{times} % Use the Times font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+% Bibliography
+%\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{autolang}
+%\addbibresource{bibliography.bib} % BibTeX bibliography file
+%\defbibheading{bibempty}{}
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{backgroundPic}};
+\draw (current page.center) node [fill=blue!25!white,fill opacity=0.5,text=white,text opacity=0.9,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering AirBrush\\[15pt] % Book title
+{\Large Crea, disegna, modella con le TUE mani}\\[20pt] % Subtitle
+{\huge Giorgio Mazza}}}; % Author name
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt](background) at (current page.center){\includegraphics[width=\paperwidth/3]{Logo_Università_di_Perugia}};
+\end{tikzpicture}
+~\vfill
+\thispagestyle{empty}
+{
+\centering \textsc{Corso di Human Computer Interaction\\ Università degli studi di Perugia}\\
+
+\centering \textsc{github.com/Shizen39}\\ % URL
+
+
+\centering \textit{Giugno 2018} % Printing/edition date
+}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head.png} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head1.png} % Chapter heading image
+
+\chapter{Introduzione}
+
+\section{Generalità}\index{Motivation}
+In ambiti artistici quali quelli del disegno o della modellazione di oggetti quali vestiti, mobili, modellini o modelli usabili nei videogiochi, è sempre stato presente un grande vincolo: modellare oggetti intrinsecamente tridimensionali, in uno spazio bidimensionale (il monitor).\\
+AirBrush è un'applicazione per smartphones e tablet che permette agli utenti di approcciarsi al disegno e alla modellazione 3d in modo del tutto innovativo. \\
+Grazie alle nuove tecnologie, AirBrush introduce la Realtà Aumentata (AR) nei suddetti ambiti; Ciò le permette di rompere i vincoli imposti dallo schermo del monitor e di immergere l'utente in un'esperienza creativa intuitiva, innovativa, efficace e totalmente libera.\\
+Così lo spazio di lavoro, la tela su cui dipingere, lo spazio in cui modellare, diventano lo spazio che circonda l'utente.
+
+\section{Obiettivi}\index{Objective}
+\paragraph{Disegno/Modellazione} L'app intende rivoluzionare l'approccio dei designers (con esperienza o meno), ma anche di utenti appassionati o incuriositi, al disegno e alla modellazione 3d. \\
+L'approccio bidimensionale a cui siamo abituati può sembrare a volte complesso quanto poco efficace. Per non parlare poi della curva di apprendimemnto di determinati software specifici. E' qui che entra in gioco AirBrush rompendo gli schemi a cui siamo abituati, quali l'uso del monitor, di un foglio o di una tela per dare sfogo alla nostra creatività, facendo salire l'esperienza utente ad un livello superiore e totalmente innovativo.
+\paragraph{Market} L'app si  pone anche come servizio di condivisione dei propri modelli o disegni con l'intera community, istituendo una classifica dei migliori lavori con annesso sistema di ranking, di conteggio delle visualizzazioni e dei downloads, divenendo di fatto per l'artista occasione di visibilità e di guadagno attraverso i propri lavori.\\
+
+%L'idea è quella di permettere alle piccole imprese/liberi professionti/appassionati che desiderano approcciarsi in modo innovativo al loro lavoro, di svilupparsi blablabla
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+
+
+\section{Utenti}\index{Context}
+La segmentazione degli utenti è stata fatta distinguendoli sulla base dei benefici ricercati tramite l'uso dell'applicazione, distinguendoli in \textbf{Designers} e \textbf{Brand/Attività commerciale}. Questi due segmenti sono ulteriormente caratterizzabili:
+\begin{itemize}
+\item \textbf{Designers}: Rappresentano quei liberi professionisti o quelle piccole imprese/startup che possono essere di \emph{moda}, di\emph{ interior design}, di \emph{architettura}, di \emph{videogiochi} o di\emph{ modellazione 3d} che producono il modello 3d finito.
+\item \textbf{Brand/Attività commerciale}: Rappresentano quei soggetti che usufruiscono dei modelli 3d finiti, proposti dai profili sopracitati, per poterli usare per scopi promozionali ma anche di riutilizzo.
+\end{itemize}
+
+
+
+\newpage
+\section{Scenari d'uso}\index{Scenari d'uso}
+Luca è un designer di moda esperto che passa molto tempo con monitor, mouse e tastiera a creare modelli di abiti che saranno poi usati per la creazione del capo vero e proprio. Luca è consapevole dell’evoluzione tecnologica in atto al riguardo ma non ha mai intrapreso tali investimenti in ambito lavorativo in quanto troppo elevati. \\
+Tramite un rappresentante viene a conoscenza di AirBrush, applicazione con la quale potrà svolgere il suo lavoro in modo del tutto innovativo.
+\\\\
+Marco è un giovane che ha da poco preso a far parte, come modellatore e designer, di una startup di videogiochi.
+Marco inizia la sua strada imprenditoriale con un basso costo di accesso e capitali piuttosto bassi, ma allo stesso tempo non vuole rinunciare a lavorare con strumenti all'avanguardia. \\
+Tramite passaparola, il suo mentor lo mette a conoscenza di un app economica ma allo stesso tempo innovativa che fa al caso suo, AirBrush.
+\\\\
+Francesca è un'appassionata di disegno virtuale e modellazione 3d. Tramite i social viene a conoscenza di AirBrush, un’applicazione che oltre ad offrire uno strumento che rivoluzionerà il suo approccio al disegno, le perfetterà di entrare nella community dedicata e di poter condividere i suoi migliori lavori con l'intera community. \\Acquistato AirBrush, Francesca inizia a disegnare ed inserire i suoi modelli sul Market dell'applicazione e dopo qualche giorno con sua grande sorpresa trova alcuni dei suoi lavori nella top 10 della classifica del market, ed oltre ad aver acquisito visibilità come Designer, ha anche guadagnato sulle vendite dei suoi modelli.
+
+
+\newpage
+\section{Fattibilità tecnologica}\index{Fattibilità tecnologic}
+Per lo sviluppo del prodotto in questione, bisognerà utilizzare linguaggi di programmazione per app, sia lato iOS che Android, inoltre bisognerà affidare i dati e la relativa gestione ad un CRM esterno. Questo richiederà innanzitutto che il team di sviluppo sia composto da programmatori qualificati e specializzati nella programmazione di app per entrambi i sistemi operativi;
+ in secondo luogo ci sarà bisogno di far svolgere la parte di CRM a terze parti, almeno nella fase di lancio dell’applicazione, ma anche per guidare il processo di fidelizzazione e l'aumento del Lifetime value (LTV) dei clienti.
+
+Un altro aspetto riguarda l'utilizzo di cardboard per garantire all'utente un'esperienza immersiva, e del leapmotion per coinvorgerlo interamente....
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2
+%----------------------------------------------------------------------------------------
+\chapterimage{head2.png}
+
+\chapter{Posizionamento}
+
+\section{Situazione attuale}\index{Situazione attuale}
+
+%\begin{figure}[h]
+%    \centering
+%    \includegraphics[width=0.77\textwidth]{ha-gray-conv-crp.jpg}
+   % \caption{Picuture of the M83 galaxy, image taken from the WFC3 ERS M83 Data Products, http://archive.stsci.edu/prepds/wfc3ers/m83datalist.html}
+   % \label{fig:awesome_image}
+%\end{figure}
+
+\newpage
+\section{Posizionamento competitivo}\index{Posizionamento competitivo}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel velit felis. Pellentesque nec felis eget mauris pharetra sollicitudin ut quis ligula. Nullam venenatis a orci id congue. Phasellus molestie posuere felis, ut viverra nisl congue vitae. Morbi et porttitor leo. Integer sed tempor arcu. Aenean eleifend sed ipsum non iaculis. Vivamus vel libero ac enim cursus ultrices nec nec justo. Morbi ut maximus tortor. Curabitur malesuada ex vitae massa molestie ullamcorper. Sed at justo vel orci elementum fermentum. Fusce pretium vulputate tellus nec auctor. Pellentesque condimentum varius dui sed sagittis. Fusce ultricies rhoncus nisl sit amet ultrices. Curabitur rhoncus elit risus, at hendrerit lacus imperdiet vitae. Morbi aliquam arcu at ante auctor, commodo egestas turpis consequat.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ultricies ornare tempor. Maecenas pellentesque eu neque in mollis. In at orci cursus augue pellentesque condimentum. Aliquam magna diam, suscipit id facilisis sit amet, porta rhoncus metus. Proin tincidunt orci in pellentesque commodo. Duis egestas ultrices posuere. Nunc vehicula ligula ac consectetur auctor. Mauris cursus ligula gravida, rutrum leo nec, aliquam quam. Donec ullamcorper placerat tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut congue, sapien ut pharetra accumsan, est lectus laoreet turpis, dictum lobortis ligula mi at leo. Cras facilisis libero et pulvinar fringilla. Donec sapien metus, tempus eu porttitor in, finibus nec tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+Donec quis dolor vitae ex condimentum pellentesque porttitor et purus. Duis porta et enim a bibendum. Vivamus nec tincidunt eros. Nunc volutpat mauris sed ex fermentum semper. In mollis mollis vehicula. Duis metus nibh, tristique quis mi et, molestie dictum odio. Praesent quis enim libero. Nulla lorem dolor, lacinia at ullamcorper eu, tincidunt ut purus. Etiam at luctus nibh. Integer eu facilisis leo. Maecenas lobortis, eros ut tempus varius, tortor erat dapibus turpis, a ornare orci augue id nulla. Phasellus scelerisque orci a erat lacinia, et vulputate elit tempor. Sed quis porta sem. Mauris eu erat dictum, finibus purus eleifend, eleifend eros. Proin at diam sed odio sollicitudin tempus. Pellentesque laoreet odio non ligula ornare molestie.
+
+
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head3.png}
+\chapter{Requisiti}
+
+\section{Casi d'uso}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel velit felis. Pellentesque nec felis eget mauris pharetra sollicitudin ut quis ligula. Nullam venenatis a orci id congue. Phasellus molestie posuere felis, ut viverra nisl congue vitae. Morbi et porttitor leo. Integer sed tempor arcu. Aenean eleifend sed ipsum non iaculis. Vivamus vel libero ac enim cursus ultrices nec nec justo. Morbi ut maximus tortor. Curabitur malesuada ex vitae massa molestie ullamcorper. Sed at justo vel orci elementum fermentum. Fusce pretium vulputate tellus nec auctor. Pellentesque condimentum varius dui sed sagittis. Fusce ultricies rhoncus nisl sit amet ultrices. Curabitur rhoncus elit risus, at hendrerit lacus imperdiet vitae. Morbi aliquam arcu at ante auctor, commodo egestas turpis consequat.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ultricies ornare tempor. Maecenas pellentesque eu neque in mollis. In at orci cursus augue pellentesque condimentum. Aliquam magna diam, suscipit id facilisis sit amet, porta rhoncus metus. Proin tincidunt orci in pellentesque commodo. Duis egestas ultrices posuere. Nunc vehicula ligula ac consectetur auctor. Mauris cursus ligula gravida, rutrum leo nec, aliquam quam. Donec ullamcorper placerat tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut congue, sapien ut pharetra accumsan, est lectus laoreet turpis, dictum lobortis ligula mi at leo. Cras facilisis libero et pulvinar fringilla. Donec sapien metus, tempus eu porttitor in, finibus nec tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+Donec quis dolor vitae ex condimentum pellentesque porttitor et purus. Duis porta et enim a bibendum. Vivamus nec tincidunt eros. Nunc volutpat mauris sed ex fermentum semper. In mollis mollis vehicula. Duis metus nibh, tristique quis mi et, molestie dictum odio. Praesent quis enim libero. Nulla lorem dolor, lacinia at ullamcorper eu, tincidunt ut purus. Etiam at luctus nibh. Integer eu facilisis leo. Maecenas lobortis, eros ut tempus varius, tortor erat dapibus turpis, a ornare orci augue id nulla. Phasellus scelerisque orci a erat lacinia, et vulputate elit tempor. Sed quis porta sem. Mauris eu erat dictum, finibus purus eleifend, eleifend eros. Proin at diam sed odio sollicitudin tempus. Pellentesque laoreet odio non ligula ornare molestie.
+\newpage
+%\begin{table}[h]
+%  \centering
+%  \begin{tabular}{ c c c c c c }
+  %  \hline\hline
+   % Filter / Config. & Waveband / Central $\lambda$/ Line & Obs. Date & Comment \\
+  %  \hline
+   % F225W & UV filter / 235.9 nm & 26 Aug 2009 &  UV wide\\
+    
+  %  F336W & UV filter / 335.5 nm & 26 Aug 2009 & Str$\ddot{o}$mgren $u$\\
+    
+    %F373N & Narrow-Band Filter / 373.0 nm & 19 Aug 2009 & Includes \textsc{[OII]}\\
+    
+    %F438W & Wide-Band Filter / 432.5 nm & 26 Aug 2009 & $B$, Johnson-Cousins set\\
+    
+    %F487N & Narrow-Band Filter / 487.1 nm & 25 Aug 2009 & Includes H$\beta$\\
+    
+  %  F502N & Narrow-Band Filter / 501.0 nm & 26 Aug 2009 & Includes \textsc{[O III]}\\
+    
+    %F657N & Narrow-Band Filter / 656.7 nm & 25 Aug 2009 & Includes H$\alpha$+\textsc{[NII]}\\
+    
+   % F673N & Narrow-Band Filter / 676.6 nm & 20 Aug 2009 & Includes \textsc{[SII]}\\
+    
+   % F814W & Wide-Band Filter / 802.4 nm & 26 Aug 2009 & $I$, Johnson-Cousins set\\
+    %\hline
+  %\end{tabular}
+  %\caption{Summary of Observations}
+ % \label{tab:uno}
+%\end{table}
+
+\section{Requisiti per l'esperienza utente}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel velit felis. Pellentesque nec felis eget mauris pharetra sollicitudin ut quis ligula. Nullam venenatis a orci id congue. Phasellus molestie posuere felis, ut viverra nisl congue vitae. Morbi et porttitor leo. Integer sed tempor arcu. Aenean eleifend sed ipsum non iaculis. Vivamus vel libero ac enim cursus ultrices nec nec justo. Morbi ut maximus tortor. Curabitur malesuada ex vitae massa molestie ullamcorper. Sed at justo vel orci elementum fermentum. Fusce pretium vulputate tellus nec auctor. Pellentesque condimentum varius dui sed sagittis. Fusce ultricies rhoncus nisl sit amet ultrices. Curabitur rhoncus elit risus, at hendrerit lacus imperdiet vitae. Morbi aliquam arcu at ante auctor, commodo egestas turpis consequat.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ultricies ornare tempor. Maecenas pellentesque eu neque in mollis. In at orci cursus augue pellentesque condimentum. Aliquam magna diam, suscipit id facilisis sit amet, porta rhoncus metus. Proin tincidunt orci in pellentesque commodo. Duis egestas ultrices posuere. Nunc vehicula ligula ac consectetur auctor. Mauris cursus ligula gravida, rutrum leo nec, aliquam quam. Donec ullamcorper placerat tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut congue, sapien ut pharetra accumsan, est lectus laoreet turpis, dictum lobortis ligula mi at leo. Cras facilisis libero et pulvinar fringilla. Donec sapien metus, tempus eu porttitor in, finibus nec tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+Donec quis dolor vitae ex condimentum pellentesque porttitor et purus. Duis porta et enim a bibendum. Vivamus nec tincidunt eros. Nunc volutpat mauris sed ex fermentum semper. In mollis mollis vehicula. Duis metus nibh, tristique quis mi et, molestie dictum odio. Praesent quis enim libero. Nulla lorem dolor, lacinia at ullamcorper eu, tincidunt ut purus. Etiam at luctus nibh. Integer eu facilisis leo. Maecenas lobortis, eros ut tempus varius, tortor erat dapibus turpis, a ornare orci augue id nulla. Phasellus scelerisque orci a erat lacinia, et vulputate elit tempor. Sed quis porta sem. Mauris eu erat dictum, finibus purus eleifend, eleifend eros. Proin at diam sed odio sollicitudin tempus. Pellentesque laoreet odio non ligula ornare molestie.
+%\begin{remark}
+%	Some links to start
+%\end{remark}
+\newpage
+
+\section{Further work}
+Well, finally we reached the point where I my time in Canada finished and I this research is still on its first stages. I have so many ideas of how to explore the clustering techniques in the DAME platform, MatLab, Python and everything else that can be tested. 
+
+\subsection{Some interesting ideas}
+For now, I would say that your best chance here, is to device an efficient way to input the information contained in a datacube as a list of points with values and reduce its dimensionality by randomly choosing them on every layer. If you are ever stuck, or no new ideas come to your mind, do not hesitate to contact me I might have a new interesting idea you can test.
+
+\subsection{Links you should check out}
+Most of them are listed in the useful resourses section of The Caltech-JPL Summer School on Big Data Analytics, the webpage \url{https://class.coursera.org/bigdataschool-001/wiki/Useful_resources}, you may need to create an account in Coursera and enroll in the course. And the rest of them are located in the References section on my GitHub page, \url{https://github.com/LaurethTeX/Clustering/blob/master/References.md}.
+\vfill
+\textit{Wish you all the best, Andrea Hidalgo}
+\end{document}

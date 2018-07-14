@@ -1,0 +1,91 @@
+% !TeX spellcheck = IT
+\documentclass[a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{float} %per posizione assoluta delle immagini [H]
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{nameref} 
+\usepackage{siunitx} 
+\usepackage[top=0.7in, bottom=0.7in, left=0.7in, right=1.6in]{geometry} %margini
+\setcounter{section}{-1} %per numerare le sezioni partendo da 0
+
+\graphicspath{{./images/}}
+
+%defines-----------------------------------
+\def\code#1{\texttt{#1}}
+\def\sec#1{\section{#1}\label{#1}} 
+\def\sub#1{\subsection{#1}\label{#1}} 
+\def\subsub#1{\subsubsection{#1}\label{#1}} 
+\def\para#1{\paragraph{#1}\label{#1}}
+\def\vedi#1{\nameref{#1}} 
+\def\italic#1{\textit{#1}}
+\def\image[#1][#2]#3{
+  \begin{figure}[H]
+  \centering
+  \includegraphics[#2]{#1}
+  \caption{#3}
+  \end{figure}}
+\def\boximage[#1][#2]#3{
+  \begin{figure}[H]
+  \centering
+  \fbox{\includegraphics[#2]{#1}}
+  \caption{#3}
+  \end{figure}}
+\def\footurl[#1]#2{\href{#2}{#1}\footnote{\url{#2}}}
+%------------------------------------------
+
+\title{AirBrush}
+\author{Giorgio Mazza}
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\section{Generalità}
+\subsection{Descrizione del prodotto}
+In ambiti artistici quali quelli del disegno o della modellazione di oggetti quali vestiti, mobili, modellini o modelli usabili nei videogiochi, è sempre stato presente un grande vincolo: modellare oggetti intrinsecamente tridimensionali, in uno spazio bidimensionale (il monitor).\\
+AirBrush è un'applicazione per smartphones e tablet che permette agli utenti di approcciarsi al disegno e alla modellazione 3d in modo del tutto innovativo. \\
+Grazie alle nuove tecnologie, AirBrush introduce la Realtà Aumentata (AR) nei suddetti ambiti; Ciò le permette di rompere i vincoli imposti dallo schermo del monitor e di immergere l'utente in un'esperienza creativa intuitiva, innovativa, efficace e totalmente libera.\\
+Così lo spazio di lavoro, la tela su cui dipingere, lo spazio in cui modellare, diventano lo spazio che circonda l'utente.
+
+\subsection{Obiettivi}
+\paragraph{Disegno/Modellazione}: L'app intende rivoluzionare l'approccio dei designers (con esperienza o meno), ma anche di utenti appassionati o incuriositi, al disegno e alla modellazione 3d. \\
+L'approccio bidimensionale a cui siamo abituati può sembrare a volte complesso quanto poco efficace. Per non parlare poi della curva di apprendimemnto di determinati software specifici. E' qui che entra in gioco AirBrush rompendo gli schemi a cui siamo abituati, quali l'uso del monitor, di un foglio o di una tela per dare sfogo alla nostra creatività, facendo salire l'esperienza utente ad un livello superiore e totalmente innovativo.
+\paragraph{Market}: L'app si  pone anche come servizio di condivisione dei propri modelli o disegni con l'intera community, istituendo una classifica dei migliori lavori con annesso sistema di ranking, di conteggio delle visualizzazioni e dei downloads, divenendo di fatto per l'artista occasione di visibilità e di guadagno attraverso i propri lavori.\\
+
+\subsection{Utenti}
+\subsection{Scenari d'uso}
+\subsection{Fattibilità tecnologica}
+
+\section{Posizionamento}
+\subsection{Situazione attuale}
+\subsection{Posizionamento competitivo}
+\subsection{Swot Analysis}
+
+\section{Requisiti}
+\subsection{Casi d'uso}
+\subsection{Requisiti per l'esperienza utente}
+
+\section{TODO}
+
+0) onboarding (modellazione free + market in lettura) -$>$ 1) navigazione free -$>$  [esportazione in locale/pubblicazione market] -$>$  2) accesso -$>$ 3) uso\\\\
+
+
+0.Modellazione free\\
+-Strumenti modellazione base		--$>$ 	1.Modellazione con registrazione\\				
+-Accesso in sola lettura al market	--$>$ 	2.Market con registrazione\\\\
+
+1.Modellazione con registrazione\\
+-Accesso a strumenti avanzati \\
+-Possibilità di importare modelli\\\\
+
+2.Market\\
+-Guadagnare pubblicando i tuoi lavori + acquisto modelli \\
+-Views + downloads  -$>$  classifica  -$>$  visibilità\\
+-Categorie modelli + tag per aumentare visibilità  -$>$  profilazione\\
+
+\end{document}
