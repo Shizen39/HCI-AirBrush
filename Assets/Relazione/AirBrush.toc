@@ -16,8 +16,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Scenari d'uso}{6}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Fattibilità tecnologica}{6}{section.1.5}
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Posizionamento}{7}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Situazione attuale}{7}{section.2.1}
@@ -34,11 +32,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Requisiti}{10}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Casi d'uso}{10}{section.3.1}
+\contentsline {section}{\numberline {3.1}Fattibilità tecnologica}{10}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Requisiti per l'esperienza utente}{12}{section.3.2}
+\contentsline {section}{\numberline {3.2}Casi d'uso}{11}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Conclusione}{12}{section.3.3}
+\contentsline {section}{\numberline {3.3}Requisiti per l'esperienza utente}{13}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Further work}{12}{section*.7}
+\contentsline {section}{\numberline {3.4}Conclusione}{13}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Further work}{13}{section*.7}
 \contentsfinish 
